@@ -41,6 +41,28 @@
         </div>
     </form>
 </div>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div id="formularioModificarContraseña" style="display: none;" class="bg-light p-4 rounded">
+                <h2 class="mb-3">Modificar Contraseña</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nuevaContraseña" class="form-label">Contraseña Actual:</label>
+                        <input type="password" id="nuevaContraseña" name="nuevaContraseña" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nuevaContraseña" class="form-label">Nueva Contraseña:</label>
+                        <input type="password" id="nuevaContraseña" name="nuevaContraseña" class="form-control">
+                    </div>
+                    <button id="btnGuardarContraseña" class="btn btn-primary">Guardar</button>
+                    <button id="btnCancelarContraseña" class="btn btn-danger">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <h1>Datatable de Permisos</h1>
 <div class="row justify-content-center">
     <div class="col table-responsive">

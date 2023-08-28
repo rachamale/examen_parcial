@@ -38,12 +38,12 @@
                         <ul class="dropdown-menu  dropdown-menu-dark " id="dropwdownRevision" style="margin: 0;">
                             <!-- <h6 class="dropdown-header">Información</h6> -->
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/usuarios"><i
-                                        class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Registrar Usuarios</a>
-                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/permisos"><i
-                                        class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Permisos</a>
-                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/roles"><i
-                                        class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Asignar Roles</a>
+                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/usuarios"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Registrar Usuarios</a>
+                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/permisos"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Permisos</a>
+                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/roles"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Asignar Roles</a>
+                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/usuarios/estadistica"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Grafica Usuarios Activos e Inactivos</a>
+                                <a class="dropdown-item nav-link text-white " href="/examen_parcial/permisos/estadistica"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Grafica Usuarios por Rol</a>
+                            
                             </li>
                         </ul>
                     </div>

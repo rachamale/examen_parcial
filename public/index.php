@@ -29,6 +29,12 @@ $router->post('/API/roles/modificar', [RolController::class,'modificarAPI'] );
 $router->post('/API/roles/eliminar', [RolController::class,'eliminarAPI'] );
 $router->get('/API/roles/buscar', [RolController::class,'buscarAPI'] );
 
+$router->get('/API/permisos/estadisticaPerm', [UsuarioController::class,'detallePermisosAPI']);
+$router->get('/permisos/estadistica', [UsuarioController::class,'estadisticaPerm']);
+
+$router->get('/API/usuarios/estadisticaUsu', [UsuarioController::class,'detalleUsuariosAPI']);
+$router->get('/usuarios/estadistica', [UsuarioController::class,'estadisticaUsu']);
+
 
 $router->comprobarRutas();
 

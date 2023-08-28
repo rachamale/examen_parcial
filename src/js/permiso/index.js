@@ -10,12 +10,19 @@ const btnGuardar = document.getElementById('btnGuardar');
 const btnBuscar = document.getElementById('btnBuscar');
 const btnModificar = document.getElementById('btnModificar');
 const btnCancelar = document.getElementById('btnCancelar');
+const btnModificarcontraseña = document.getElementById('btnModificarcontraseña');
+const formularioContraseña = document.getElementById('formularioContraseña');
+const btnCancelarContraseña = document.getElementById('btnCancelarContraseña');
+const formularioModificarContraseña = document.getElementById('formularioModificarContraseña');
 
+
+formularioModificarContraseña.style.display = 'none';
 
 btnModificar.disabled = true
 btnModificar.parentElement.style.display = 'none'
 btnCancelar.disabled = true
 btnCancelar.parentElement.style.display = 'none'
+
 
 let contador = 1; 
 const datatable = new Datatable('#tablaPermisos', {
@@ -40,7 +47,14 @@ const datatable = new Datatable('#tablaPermisos', {
             data: 'usu_estado',
         },
         {
-            title : 'MODIFICAR',
+            title: 'MODIFICAR CONTRASEÑA ',
+            data: 'permiso_id',
+            searchable: false,
+            orderable: false,
+            render: (data, type, row, meta) => `<button class="btn btn-primary" data-id='${data}' data-usuario='${row.permiso_usuario}' data-rol='${row.permiso_rol}' data-password='${row.usu_password}'>Modificar Contraseña</button>`
+        },        
+        {
+            title : 'MODIFICAR ',
             data: 'permiso_id',
             searchable : false,
             orderable : false,
@@ -360,7 +374,16 @@ const desactivar = async (e) => {
         }
     }
 }
-const colocarDatos = (dataset) => {
+
+    const mostrarFormulario = () => {
+        formularioModificarContraseña.style.display = 'block';
+    };
+
+    const ocultarFormulario = () => {
+        formularioModificarContraseña.style.display = 'none';
+    };
+
+    const colocarDatos = (dataset) => {
     formulario.permiso_usuario.value = dataset.usuario;
     formulario.permiso_rol.value = dataset.rol;
 
@@ -392,7 +415,6 @@ const cancelarAccion = () => {
 
 buscar();
 
-//datatable.on('click','.btn-warning', traeDatos )
 
 formulario.addEventListener('submit', guardar)
 btnBuscar.addEventListener('click', buscar)
@@ -402,3 +424,10 @@ datatable.on('click','.btn-warning', traeDatos )
 datatable.on('click','.btn-danger', eliminar )
 datatable.on('click','.btn-success', activar )
 datatable.on('click','.btn-info', desactivar )
+datatable.on('click', '.btn.btn-primary', mostrarFormulario);
+btnCancelarContraseña.addEventListener('click', ocultarFormulario);
+
+
+
+
+
