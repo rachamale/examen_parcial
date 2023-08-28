@@ -8,7 +8,6 @@ use MVC\Router;
 
 class UsuarioController
 {
-
     public static function index(Router $router)
     {
         $usuarios = usuario::all();
@@ -16,7 +15,6 @@ class UsuarioController
             'usuarios' => $usuarios,
         ]);
     }
-
     public static function guardarAPI()
     {
         try {
@@ -26,7 +24,6 @@ class UsuarioController
             $confirm_password = $_POST["usu_confirm_password"];
 
             if ($password) {
-                // Hash de la contraseña
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
                 $usuario = new Usuario([
